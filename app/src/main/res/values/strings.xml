@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="skelp">
+        Skelp
+    </string>
+    <string name="tm">
+        Tm
+    </string>
+</resources>
