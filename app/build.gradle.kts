@@ -32,7 +32,22 @@ android {
     }
 }
 
+//allprojects {
+//    repositories {
+//        mavenCentral()
+//        maven {
+//            url = uri("https://maven.google.com")
+//        }
+//        maven {
+//            url = uri("http://artifactory.cloud.mapquest.com/artifactory/et-android-binaries")
+//        }
+//    }
+//}
+
+
 dependencies {
+    implementation ("com.mapquest.android:searchahead-sdk:1.3.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")

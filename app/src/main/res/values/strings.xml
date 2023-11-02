@@ -6,4 +6,22 @@
     <string name="tm">
         Tm
     </string>
+    <string name="welcome">Welcome</string>
+    <string name="username">Welcome</string>
+    <string name="minus">-</string>
+    <string name="number">0</string>
+    <string name="plus">+</string>
+    <string name="map">Map</string>
+    <string name="api_call">Api Call</string>
+    <string name="logout">Logout</string>
+    <string name="profileimage">ProfileImage</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="applogo">AppLogo</string>
+    <string name="lbIUsername">Username</string>
+    <string name="lblPassword">Password</string>
+    <string name="lblConfirm_password">Confirm Password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="register">Register</string>
 </resources>

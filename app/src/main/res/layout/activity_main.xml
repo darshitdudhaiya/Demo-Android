@@ -5,7 +5,6 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
         tools:context=".MainActivity">
     <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
                 tools:ignore="MissingConstraints" app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +33,7 @@
                     android:id="@+id/txtUsername"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:hint="Username"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" app:layout_constraintHorizontal_bias="0.0"
@@ -56,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="36dp"
                     android:text="Log In"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtPassword" app:layout_constraintHorizontal_bias="0.0"/>
@@ -66,42 +65,42 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="108dp"
                     android:text="SignUp"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtPassword" app:layout_constraintHorizontal_bias="0.0"/>
-            <LinearLayout android:layout_width="match_parent" android:orientation="horizontal"
-                          android:layout_height="wrap_content"
-                          tools:ignore="MissingConstraints" app:layout_constraintBottom_toBottomOf="parent"
-                          app:layout_constraintTop_toBottomOf="@+id/btnRegister" tools:layout_editor_absoluteX="0dp"
-                          app:layout_constraintVertical_bias="1.0">
+<!--            <LinearLayout android:layout_width="match_parent" android:orientation="horizontal"-->
+<!--                          android:layout_height="wrap_content"-->
+<!--                          tools:ignore="MissingConstraints" app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                          app:layout_constraintTop_toBottomOf="@+id/btnRegister" tools:layout_editor_absoluteX="0dp"-->
+<!--                          app:layout_constraintVertical_bias="1.0">-->
 
-                <ImageView
-                        android:id="@+id/googleSignInButton"
-                        android:layout_width="128dp"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="16dp"
-                        android:src="@drawable/github"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/loginButton"/>
+<!--                <ImageView-->
+<!--                        android:id="@+id/googleSignInButton"-->
+<!--                        android:layout_width="128dp"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:layout_marginTop="16dp"-->
+<!--                        android:src="@drawable/github"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/loginButton"/>-->
 
-                <ImageView
-                        android:id="@+id/githubSignInButton"
-                        android:layout_width="101dp"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="16dp"
-                        android:src="@drawable/linkedin"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/googleSignInButton"/>
-                <ImageView
-                        android:id="@+id/linkedinSignInButton"
-                        android:layout_width="131dp"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="16dp"
-                        android:src="@drawable/twitter"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/githubSignInButton"/>
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                        android:id="@+id/githubSignInButton"-->
+<!--                        android:layout_width="101dp"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:layout_marginTop="16dp"-->
+<!--                        android:src="@drawable/linkedin"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/googleSignInButton"/>-->
+<!--                <ImageView-->
+<!--                        android:id="@+id/linkedinSignInButton"-->
+<!--                        android:layout_width="131dp"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:layout_marginTop="16dp"-->
+<!--                        android:src="@drawable/twitter"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/githubSignInButton"/>-->
+<!--            </LinearLayout>-->
             <TextView
                     android:text="Login"
                     android:textStyle="bold"
