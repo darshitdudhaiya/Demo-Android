@@ -4,10 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
+import android.util.Log
+import android.widget.*
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.demo.Adapters.PersonRCView
+//import android.widget.ArrayAdapter
+//import android.widget.ListView
 import com.example.demo.Helpers.Api
+import com.example.demo.Models.Persons
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -48,23 +53,43 @@ class HomeActivity : AppCompatActivity() {
             return
         }
 
-        findViewById<TextView>(R.id.textView).text = my_prefs.getString("username", "").toString()
+        // getting the recyclerview by its id
+        val recyclerview = findViewById<RecyclerView>(R.id.recyclerView)
 
-        findViewById<Button>(R.id.btnCountMinus).setOnClickListener {
-            var count = findViewById<TextView>(R.id.textCount).text.toString().toInt()
+        // this creates a vertical layout Manager
+        recyclerview.layoutManager = LinearLayoutManager(this)
 
-            count -= 1
+        // ArrayList of class ItemsViewModel
+        val data = ArrayList<Persons>()
 
-            findViewById<TextView>(R.id.textCount).text = count.toString()
+        // This loop will create 20 Views containing
+        // the image with the count of view
+        for (i in 1..20) {
+            data.add(Persons("Person ${i}", "Numeber" + i))
         }
 
-        findViewById<Button>(R.id.btnCountPlus).setOnClickListener {
-            var count = findViewById<TextView>(R.id.textCount).text.toString().toInt()
+        // This will pass the ArrayList to our Adapter
+        val adapter = PersonRCView(data)
 
-            count += 1
+        // Setting the Adapter with the recyclerview
+        recyclerview.adapter = adapter
 
-            findViewById<TextView>(R.id.textCount).text = count.toString()
-        }
+
+//        findViewById<Button>(R.id.btnCountMinus).setOnClickListener {
+//            var count = findViewById<TextView>(R.id.textCount).text.toString().toInt()
+//
+//            count -= 1
+//
+//            findViewById<TextView>(R.id.textCount).text = count.toString()
+//        }
+//
+//        findViewById<Button>(R.id.btnCountPlus).setOnClickListener {
+//            var count = findViewById<TextView>(R.id.textCount).text.toString().toInt()
+//
+//            count += 1
+//
+//            findViewById<TextView>(R.id.textCount).text = count.toString()
+//        }
 
         findViewById<Button>(R.id.btnTest).setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
@@ -79,11 +104,14 @@ class HomeActivity : AppCompatActivity() {
                     val response = Api.request("api.php")
                     withContext(Dispatchers.Main) {
                         Toast.makeText(this@HomeActivity, response, Toast.LENGTH_LONG).show()
+                        Log.e("Exception Message",  "No message provided")
                     }
                 } catch (e: Exception) {
-                    withContext(Dispatchers.Main) {
+                    runOnUiThread {
                         Toast.makeText(this@HomeActivity, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+
                     }
+
                 }
             }
         }
